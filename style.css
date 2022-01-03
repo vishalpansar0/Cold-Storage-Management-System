@@ -1,0 +1,21 @@
+body {
+    background-image: url("images/mainWall.jpg");
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;
+    background-size: cover;
+  }
+
+.main-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.login{
+    border: 3px solid #922B21;
+    border-radius: 5px;
+}
+.login-wrap{
+    padding:20px;
+}
