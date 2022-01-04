@@ -149,7 +149,7 @@ if(isset($_SESSION['uname'])){
                                 <th>Booking Id</th>
                                 <th>User ID</th>
                                 <th>Storage</th>
-                                <th>Cost/Item</th>
+                               
                                 <th>Quantity</th>
                                 <th>Total Cost</th>
                                 <th>Order Date</th>
@@ -164,9 +164,9 @@ if(isset($_SESSION['uname'])){
                        while($Datarows = $stmt->fetch_assoc())
                        {
                            $id          = $Datarows["booking_id"];
-                           $uId         = $Datarows["user_id"];
-                           $storage     = $Datarows["storage_id"];
-                           $CostItem    = $Datarows["item_cost"];
+                           $uId         = $Datarows["u_id"];
+                           $storage     = $Datarows["s_id"];
+                         
                            $qty         = $Datarows["item_quantity"];
                            $tcost       = $Datarows["cost"];
                            $oDate       = $Datarows["order_date"];
@@ -177,7 +177,7 @@ if(isset($_SESSION['uname'])){
                                 <td>#<?php echo  $id;       ?></td>
                                 <td> <?php echo  $uId;      ?></td>
                                 <td> <?php echo  $storage;  ?></td>
-                                <td> <?php echo  $CostItem; ?></td>
+                                
                                 <td> <?php echo  $qty;      ?></td>
                                 <td> <?php echo  $tcost;    ?></td>
                                 <td> <?php echo  $oDate;    ?></td>
@@ -194,6 +194,7 @@ if(isset($_SESSION['uname'])){
                 </div>
             </div>
         </div>
+    </section>
 
 </body>
 

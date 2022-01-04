@@ -25,7 +25,9 @@ $user_table = "
     name VARCHAR(100) NOT NULL,
     username VARCHAR(100) NOT NULL , 
     password VARCHAR(100) NOT NULL,
-    avatar VARCHAR(1000)
+    city varchar(100),
+    state VARCHAR(1000),
+    zip int(2)
 )";
 
 

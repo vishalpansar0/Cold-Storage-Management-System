@@ -167,36 +167,30 @@ if(isset($_SESSION['uname'])){
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="app-stats text-center mt-3"
-                    style="color:black;font-family: 'Times New Roman', Times, serif;">Bookings Details</h2>
+                    style="color:black;font-family: 'Times New Roman', Times, serif;">Users Queries</h2>
                 <div class=" table-responsive">
                     <table class="table table-striped table-hover">
                         <thead class="thead bg-dark" style="color:white;">
                             <tr>
-                                <th>Booking Id</th>
+                                <th>Query Id</th>
                                 <th>User ID</th>
-                                <th>Storage</th>
-                                <th>Cost/Item</th>
-                                <th>Quantity</th>
-                                <th>Total Cost</th>
-                                <th>Order Date</th>
-                                <th>End Date</th>
-                                <th>Actions</th>
+                                <th>Username</th>
+                                <th>Query</th>
+                                <th>Action</th>
+                               
                             </tr>
                         </thead>
                         <?php
                        global $connection;
-                       $sql="SELECT * FROM Orders";
+                       $sql="SELECT * FROM Query";
                        $stmt=$connection->query($sql);
                        while($Datarows = $stmt->fetch_assoc())
                        {
-                           $id          = $Datarows["booking_id"];
-                           $uId         = $Datarows["user_id"];
-                           $storage     = $Datarows["storage_id"];
-                           $CostItem    = $Datarows["item_cost"];
-                           $qty         = $Datarows["item_quantity"];
-                           $tcost       = $Datarows["cost"];
-                           $oDate       = $Datarows["order_date"];
-                           $eDate       = $Datarows["end_date"];
+                           $id          = $Datarows["q_id"];
+                           $uId         = $Datarows["u_id"];
+                           $storage     = $Datarows["username"];
+                           $CostItem    = $Datarows["query_msg"];
+                          
                     ?>
                         <tbody class="tbody">
                             <tr>
@@ -204,14 +198,10 @@ if(isset($_SESSION['uname'])){
                                 <td> <?php echo  $uId;      ?></td>
                                 <td> <?php echo  $storage;  ?></td>
                                 <td> <?php echo  $CostItem; ?></td>
-                                <td> <?php echo  $qty;      ?></td>
-                                <td> <?php echo  $tcost;    ?></td>
-                                <td> <?php echo  $oDate;    ?></td>
-                                <td> <?php echo  $eDate;    ?></td>
-                                <td><a href="editgame.php" class="btn btn-success"><i class="fas fa-check-square"></i>
+                              
+                                <td><a href="deleteq.php?id=<?php echo $id; ?>" title="Delete this query" class="btn btn-warning"><i class="fas fa-trash"></i>
                                     </a>
-                                    <a href="deletegame.php" class="btn btn-danger"><i
-                                            class="far fa-times-circle"></i></i></a>
+                                    
                                 </td>
                             </tr>
                         </tbody>

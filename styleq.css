@@ -1,0 +1,31 @@
+.my-form-class{
+    /* background-color: blanchedalmond; */
+    margin: 50px;
+    padding: 10px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 19px;
+    letter-spacing: 1.6px;  
+    word-spacing: 0px;  
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    border: 3px solid saddlebrown;
+}
+input{
+    border: 11px solid green;
+}
+
+input:hover{
+    background-color: rgb(241, 144, 144);
+    border: 2px solid red;
+    opacity: 2.0;
+}
+
+h1{
+    text-align: center !important;
+    margin-left: 500px;
+
+}
